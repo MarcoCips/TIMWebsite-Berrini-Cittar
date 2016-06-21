@@ -1,0 +1,19 @@
+.foto {
+    /* Box che racchiude la galleria di foto*/
+    padding : 0px;
+    margin-top : 5px;
+    width : 100%;
+    white-space : nowrap;
+    border : 0px solid Black;
+    background-image: image("pics/doge.png");
+    backface-visibility: visible;
+    background-origin: border-box;
+}
+
+.foto img {
+    /* Anchor dove è collegata la foto*/
+    width : 250px;
+    height : 1000px;
+    padding : 8px;
+    position: inherit;
+}
