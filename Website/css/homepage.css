@@ -4,10 +4,9 @@ body {
 
 ul {
     list-style-type: none;
-    margin: 0;
+    margin: -10;
     padding: 0;
     background-color: #003c7f;
-    align-items: flex-start;
 }
 
 
@@ -89,9 +88,8 @@ li a:hover {
     border-radius: 15px;
 }
 
-.boxxe {
+.sub-menu {
     transform: translate(-330px, 25px);
     font-size: 30px;
     font-family: sans-serif;
-    
 }
