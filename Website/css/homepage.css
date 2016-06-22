@@ -1,3 +1,8 @@
+html *
+{
+   font-family: sans-serif;
+}
+
 body {
     background-color: aliceblue;
 }
@@ -97,17 +102,39 @@ li a:hover {
 }
 
 .sub-menu {
+    float: left;
     padding: 4;
     margin-top: 15px;
     width: 300px;
+    height: 300px;
     font-size: 30px;
     font-family: sans-serif;
-    border: 1px solid;
     text-align: left;
 }
 
 .sub-menu a {
     position: absolute;
     font-size: 25px;
-    transform: translate(25px, 0);
+    margin-left: 50px;
+    margin-top: 25px;
+}
+
+hr {
+    width: 1000px;
+}
+
+.section div {
+    display: inline-block;
+}
+
+.device{
+    width: 200px;
+    height: 300px;
+    margin-right: 20px;
+    border: 2px solid;
+    background-color: white;
+}
+
+.device img {
+    width: 200px;
 }
