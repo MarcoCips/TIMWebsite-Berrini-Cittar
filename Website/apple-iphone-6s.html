@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="css/homepage.css">
         <link rel="stylesheet" href="css/top-menu.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <script type="text/javascript" src="fun.js"></script>
     </head>
     
     <body style="text-align:center">
@@ -61,13 +62,22 @@
                 <li>Apple iPhone 6S</li>
             </ol>
             <div class="thumb-container">
-                <img class="thumbnail" src="pics/phones/Apple%20iPhone%206S.jpg"/>
-                <img class="thumbnail" src="pics/phones/Apple%20iPhone%206S%202.jpg"/>
+                <a href="#">
+                    <img class="thumbnail" src="pics/phones/Apple%20iPhone%206S.jpg" onclick="changeImg(src)"/>
+                </a>
+                <a href="#">
+                    <img class="thumbnail" src="pics/phones/Apple%20iPhone%206S%202.jpg" onclick="changeImg(src)"/>
+                </a>
             </div>
             <div class="phone-details">
-                <img src="pics/phones/Apple%20iPhone%206S.jpg"/>
+                <img id="phone-img" src="pics/phones/Apple%20iPhone%206S.jpg"/>
+                <h1>Apple iPhone 6S</h1>
+                <h3>Caratteristiche:</h3><br><br><br><br><br><br>
                 <p>
-                    <span class="lead">Apple iPhone 6S</span>
+                    - 4GPLUS<br>
+                    - Display Retina HD da 4,7" con risoluzione di 1334x750 px<br>
+                    - Chip A9 con coprocessore di movimento M9 integrato<br>
+                    - iOS 9 e iCloud<br>
                 </p>
             </div>
         </div>
