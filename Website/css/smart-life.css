@@ -1,10 +1,9 @@
 .foto {
     /* Box che racchiude la galleria di foto*/
     padding : 0px;
-    margin-top : 5px;
+    margin-top : 10px;
     width : 100%;
-    white-space : nowrap;
-    border : 0px solid Black;
+    border : 0px solid;
     background-image: image("pics/doge.png");
     backface-visibility: visible;
     background-origin: border-box;
@@ -16,4 +15,32 @@
     height : 1000px;
     padding : 8px;
     position: inherit;
+}
+
+.bottone {
+    width: 150;
+    height: 70;  
+    margin-top: 47vh;
+    bottom: 300px;
+}
+
+h3 {
+   margin-top: 10px;
+   color: white;
+    
+    text-decoration-color: white;
+   font-size: 140%;
+   font-weight: 200; 
+   line-height: 560px;
+   text-align: center;
+    boots
+}
+
+.colonna {
+    width : 240px;
+    height : 80vh;
+    padding : 8px;
+    margin-left: 5;
+    margin-right: 5;
+    margin-top: 10;
 }
