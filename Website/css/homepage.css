@@ -96,9 +96,12 @@ hr {
     width: 900px;
 }
 .phone-details * {
-    float:left;
+    float: left;
 }
 .phone-details img {
     width: 400px;
-    float: left;
+}
+
+.phone-details li {
+    text-align: left;
 }

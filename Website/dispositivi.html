@@ -6,6 +6,24 @@
         <link rel="stylesheet" href="css/homepage.css">
         <link rel="stylesheet" href="css/top-menu.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <script>
+        function show() {
+            if (window.XMLHttpRequest) {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+            } else {
+                // code for IE6, IE5
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+                }
+            };
+            xmlhttp.open("GET","getuser.php?q="+str,true);
+            xmlhttp.send();
+        }
+        </script>
     </head>
     
     <body style="text-align:center">
@@ -52,7 +70,7 @@
                 </li>
             </div>
         </ul><br>
-        <div class="page">
+        <div class="page" onload="show()">
             <div>
                 <img class="top-image" src="pics/Prodotti.png"/>
             </div><br>
@@ -71,21 +89,8 @@
                     <a href="#">iPhone</a><br>
                     <a>Telefoni fissi</a><br>
                 </div><br>
-                <div class="device">
-                    <img src="pics/phones/Apple%20iPhone%206S.jpg"/>
-                    <h4>Apple iPhone 6S</h4>
-                    <h3>789,90 €</h3>
+                <div id="phonese">
                 </div>
-                <div class="device">
-                    <img src="pics/phones/Samsung%20Galaxy%20S7.jpg"/>
-                    <h4>Samsung Galaxy S7</h4>
-                    <h3>699,90 €</h3>
-                </div>
-                <div class="device">
-                    <img src="pics/phones/Nokia%20Lumia%20550.jpg"/>
-                    <h4>Nokia Lumia 550</h4>
-                    <h3>99,90 €</h3>
-                </div><br>
             </div><br>
 
             <hr>
