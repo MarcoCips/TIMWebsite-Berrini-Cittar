@@ -20,7 +20,7 @@
 .bottone {
     width: 150;
     height: 70;  
-    margin-top: 47vh;
+    margin-top: 470px;
     bottom: 300px;
 }
 
@@ -33,14 +33,13 @@ h3 {
    font-weight: 200; 
    line-height: 560px;
    text-align: center;
-    boots
 }
 
 .colonna {
     width : 240px;
-    height : 80vh;
+    height : 700px;
     padding : 8px;
-    margin-left: 5;
+    margin-left:
     margin-right: 5;
     margin-top: 10;
 }
