@@ -37,9 +37,72 @@ function show(number) {
     xmlhttpTablet.send();
 }
 
-function filter(device, type) {
+function filter(device) {
     "use strict";
-    var xmlhttp;
+    var xmlhttp, i;
+    var filter = "";
+    
+    var check = document.getElementsByTagName("input");
+    
+    var typeStr = "";
+    var priceStr = "";
+    var brandStr = "";
+    var OSStr = "";
+    var offerStr = "";
+    
+    //Controllo checkbox tipologia
+    for (i = 0; i < 3; i++) {
+        if(check[i].checked){
+            if(typeStr==""){
+                typeStr = " and (Tipologia = '"+check[i].parentElement.innerText+"'";
+            } else {
+                typeStr += " or Tipologia = '"+check[i].parentElement.innerText+"'";
+            }
+        }
+    }
+    if(typeStr!=""){
+        typeStr += ")";
+    }
+    
+    //Controllo checkbox prezzo
+    for (i = 3; i < 7; i++) {
+    }
+    
+    //Controllo checkbox marca
+    for (i = 7; i < 11; i++) {
+        if(check[i].checked){
+            if(brandStr==""){
+                brandStr = " and (Marca = '"+check[i].parentElement.innerText+"'";
+            } else {
+                brandStr += " or Marca = '"+check[i].parentElement.innerText+"'";
+            }
+        }
+    }
+    if(brandStr!=""){
+        brandStr += ")";
+    }
+    
+    //Controllo checkbox OS
+    for (i = 11; i < 14; i++) {
+        if(check[i].checked){
+            if(OSStr==""){
+                OSStr = " and (OS = '"+check[i].parentElement.innerText+"'";
+            } else {
+                OSStr += " or OS = '"+check[i].parentElement.innerText+"'";
+            }
+        }
+    }
+    if(OSStr!=""){
+        OSStr += ")";
+    }
+    
+    //Controllo checkbox promozioni
+    if(check[i].checked){
+        offerStr = " and Sconto > 0"
+    }
+    
+    filter = typeStr + brandStr + OSStr + offerStr;
+    
     if (window.XMLHttpRequest) {
         // code for IE7+, Firefox, Chrome, Opera, Safari
         xmlhttp = new XMLHttpRequest();
@@ -52,7 +115,7 @@ function filter(device, type) {
             document.getElementById("Smartphone-device").innerHTML = xmlhttp.responseText;
         }
     };
-    xmlhttp.open("GET", "filter.php?d="+device+"&t="+type, true);
+    xmlhttp.open("GET", "filter.php?d="+device+"&f="+filter, true);
     xmlhttp.send();
 }
 

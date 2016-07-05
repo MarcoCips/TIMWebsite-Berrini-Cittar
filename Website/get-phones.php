@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" href="css/homepage.css">
-    <link rel="stylesheet" href="css/top-menu.css"></head>
-<body>
+    <head>
+        <link rel="stylesheet" href="css/homepage.css">
+        <link rel="stylesheet" href="css/top-menu.css">
+    </head>
+    <body>
 
-<?php
-    $type = strval($_GET['q']);
-    $number = intval($_GET['n']);
-    
-    $con = mysqli_connect('localhost','timhyp53','','my_timhyp53');
-    if (!$con) {
-        die('Could not connect: ' . mysqli_error($con));
-    }
+    <?php
+        $type = strval($_GET['q']);
+        $number = intval($_GET['n']);
 
-    mysqli_select_db($con,"my_timhyp53");
-    $sql="SELECT * FROM " . $type;
-    $result = mysqli_query($con,$sql);
-    $i = 0 ;
-    while(($row = mysqli_fetch_array($result)) && ($i < $number)) {
-        echo "<div class='device'>";
-        if($type == "Smartphone"){
-            echo "<img src='pics/phones/" . $row['Nome'] . ".jpg'/>";
-        } else if($type == "Tablet"){
-            echo "<img src='pics/tablets/" . $row['Nome'] . ".jpg'/>";
+        $con = mysqli_connect('localhost','timhyp53','','my_timhyp53');
+        if (!$con) {
+            die('Could not connect: ' . mysqli_error($con));
         }
-        echo "<h4>" . $row['Nome'] . "</h4>";
-        if(floatval($row['Sconto']) > 0){
-            echo "<h4><strike>" . $row['Prezzo'] . " €</strike></h4>";
-            echo "<h3 style='margin-top:-7px'>" . (floatval($row['Prezzo']) - floatval($row['Sconto'])) . "0 €</h3>";
-        } else {
-            echo "<h3>" . $row['Prezzo'] . " €</h3>";
+
+        mysqli_select_db($con,"my_timhyp53");
+        $sql="SELECT * FROM " . $type;
+        $result = mysqli_query($con,$sql);
+        $i = 0 ;
+        while(($row = mysqli_fetch_array($result)) && ($i < $number)) {
+            echo "<div class='device'>";
+            if($type == "Smartphone"){
+                echo "<img src='pics/phones/" . $row['Nome'] . ".jpg'/>";
+            } else if($type == "Tablet"){
+                echo "<img src='pics/tablets/" . $row['Nome'] . ".jpg'/>";
+            }
+            echo "<h4>" . $row['Nome'] . "</h4>";
+            if(floatval($row['Sconto']) > 0){
+                echo "<h4><strike>" . $row['Prezzo'] . " €</strike></h4>";
+                echo "<h3 style='margin-top:-7px'>" . (floatval($row['Prezzo']) - floatval($row['Sconto'])) . "0 €</h3>";
+            } else {
+                echo "<h3>" . $row['Prezzo'] . " €</h3>";
+            }
+            echo "</div>";
+            $i++;
         }
-        echo "</div>";
-        $i++;
-    }
-    mysqli_close($con);
-?>
-</body>
+        mysqli_close($con);
+    ?>
+    </body>
 </html>
