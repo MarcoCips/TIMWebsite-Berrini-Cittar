@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="css/homepage.css">
         <link rel="stylesheet" href="css/top-menu.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <script type="text/javascript" src="fun.js"></script>
     </head>
     
     <body style="text-align:center">
@@ -58,18 +59,19 @@
                 <li><a href="dispositivi.html">Dispositivi</a></li>
                 <li class="active">Smartphone e telefoni</li>
             </ol>
+            
             <div class="filter">
                 <h3>Filtra per...</h3><br>
                 
                 <h4>Tipologia</h4>
-                <div class="checkbox">
-                    <label><input type="checkbox" value="">Smartphone</label>
+                <div class="checkbox" onclick="filter('Smartphone', 'Smartphone')">
+                    <label><input id="type-smartphone" type="checkbox" value="">Smartphone</label>
                 </div>
                 <div class="checkbox">
-                    <label><input type="checkbox" value="">iPhone</label>
+                    <label><input id="type-tablet" type="checkbox" value="" onclick="filter('Smartphone', 'iPhone')">iPhone</label>
                 </div>
                 <div class="checkbox">
-                    <label><input type="checkbox" value="">Telefoni fissi</label>
+                    <label><input id="type-fisso" type="checkbox" value="" onclick="filter('Smartphone', 'Fisso')">Telefoni fissi</label>
                 </div>
                 
                 <h4>Prezzo</h4>
@@ -117,42 +119,7 @@
                 </div>
             </div>
 
-            <div id="section-smart" class="section">
-                <a href="apple-iphone-6s.html">
-                    <div class="device">
-                        <img src="pics/phones/Apple%20iPhone%206S.jpg"/>
-                        <h4>Apple iPhone 6S</h4>
-                        <h3>789,90 €</h3>
-                    </div>
-                </a>
-                <div class="device">
-                    <img src="pics/phones/Samsung%20Galaxy%20S7.jpg"/>
-                    <h4>Samsung Galaxy S7</h4>
-                    <h3>699,90 €</h3>
-                </div>
-                <div class="device">
-                    <img src="pics/phones/Nokia%20Lumia%20550.jpg"/>
-                    <h4>Nokia Lumia 550</h4>
-                    <h3>99,90 €</h3>
-                </div><br>
-            </div><br>
-
-            <div id="section-smart" class="section">
-                <div class="device">
-                    <img src="pics/phones/LG%20G5.jpg"/>
-                    <h4>LG G5</h4>
-                    <h3>679,90 €</h3>
-                </div>
-                <div class="device">
-                    <img src="pics/phones/Sony%20XPERIA%20X.jpg"/>
-                    <h4>Sony Xperia 20X</h4>
-                    <h3>629,90 €</h3>
-                </div>
-                <div class="device">
-                    <img src="pics/phones/Apple%20iPhone%205S.jpg"/>
-                    <h4>Apple iPhone 5S</h4>
-                    <h3>429,90 €</h3>
-                </div><br>
+            <div id="Smartphone-device">
             </div>
         </div>
     </body>

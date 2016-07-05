@@ -6,8 +6,9 @@
 <body>
 
 <?php
-    $type = strval($_GET['q']);
-    $number = intval($_GET['n']);
+    $device = strval($_GET['d']);
+    $type = strval($_GET['t']);
+    
     
     $con = mysqli_connect('localhost','timhyp53','','my_timhyp53');
     if (!$con) {
@@ -15,16 +16,11 @@
     }
 
     mysqli_select_db($con,"my_timhyp53");
-    $sql="SELECT * FROM " . $type;
+    $sql="SELECT * FROM " . $device . " WHERE Tipologia = '" . $type . "'";
     $result = mysqli_query($con,$sql);
-    $i = 0 ;
-    while(($row = mysqli_fetch_array($result)) && ($i < $number)) {
+    while($row = mysqli_fetch_array($result)) {
         echo "<div class='device'>";
-        if($type == "Smartphone"){
-            echo "<img src='pics/phones/" . $row['Nome'] . ".jpg'/>";
-        } else if($type == "Tablet"){
-            echo "<img src='pics/tablets/" . $row['Nome'] . ".jpg'/>";
-        }
+        echo "<img src='pics/phones/" . $row['Nome'] . ".jpg'/>";
         echo "<h4>" . $row['Nome'] . "</h4>";
         if(floatval($row['Sconto']) > 0){
             echo "<h4><strike>" . $row['Prezzo'] . " €</strike></h4>";
@@ -33,9 +29,9 @@
             echo "<h3>" . $row['Prezzo'] . " €</h3>";
         }
         echo "</div>";
-        $i++;
     }
     mysqli_close($con);
 ?>
+    
 </body>
 </html>
