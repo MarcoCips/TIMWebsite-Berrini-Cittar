@@ -3,12 +3,13 @@ html *
    font-family: sans-serif;
 }
 
-ul#menu {
+#menu {
     list-style-type: none;
-    margin: -10;
+    margin-left: -10;
     padding: 0;
     background-color: #003c7f;
-    min-width:1020px;
+    min-width: 1020px;
+    height: 100px;
 }
 
 .top-menu-button a {
