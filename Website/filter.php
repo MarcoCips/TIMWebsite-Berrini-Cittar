@@ -20,7 +20,11 @@
         $result = mysqli_query($con,$sql);
         while($row = mysqli_fetch_array($result)) {
             echo "<div class='device'>";
-            echo "<img src='pics/phones/" . $row['Nome'] . ".jpg'/>";
+            if($device=='Smartphone'){
+                echo "<img src='pics/phones/" . $row['Nome'] . ".jpg'/>";
+            } else if($device=='Tablet') {
+                echo "<img src='pics/tablets/" . $row['Nome'] . ".jpg'/>";
+            }
             echo "<h4>" . $row['Nome'] . "</h4>";
             if(floatval($row['Sconto']) > 0){
                 echo "<h4><strike>" . $row['Prezzo'] . " €</strike></h4>";

@@ -46,6 +46,7 @@ function filter(device) {
     
     var typeStr = "";
     var priceStr = "";
+    var inchStr = "";
     var brandStr = "";
     var OSStr = "";
     var offerStr = "";
@@ -65,11 +66,59 @@ function filter(device) {
     }
     
     //Controllo checkbox prezzo
-    for (i = 3; i < 7; i++) {
+    if(check[3].checked){
+        priceStr = " and (Prezzo < 200";
+    }
+    if(check[4].checked){
+        if(priceStr==""){
+            priceStr = " and ((Prezzo >= 200 and Prezzo < 400)";
+        } else {
+            priceStr += " or (Prezzo >= 200 and Prezzo < 400)";
+        }
+    }
+    if(check[5].checked){
+        if(priceStr==""){
+            priceStr = " and ((Prezzo >= 400 and Prezzo < 600)";
+        } else {
+            priceStr += " or (Prezzo >= 400 and Prezzo < 600)";
+        }
+    }
+    if(check[6].checked){
+        if(priceStr==""){
+            priceStr = " and (Prezzo >= 600";
+        } else {
+            priceStr += " or Prezzo >= 600";
+        }
+    }
+    if(priceStr!=""){
+        priceStr += ")";
+    }
+    
+    if(device=='Tablet'){
+        if(check[7].checked){
+            inchStr = " and (Display < 8";
+        }
+        if(check[8].checked){
+            if(priceStr==""){
+                inchStr = " and ((Display >= 8 and Display < 10)";
+            } else {
+                inchStr += " or (Display >= 8 and Display < 10)";
+            }
+        }
+        if(check[9].checked){
+            if(priceStr==""){
+                inchStr = " and (Display >= 10";
+            } else {
+                inchStr += " or (Display >= 10)";
+            }
+        }
+        if(inchStr!=""){
+            inchStr += ")";
+        }
     }
     
     //Controllo checkbox marca
-    for (i = 7; i < 11; i++) {
+    for (i = (check.length - 8); i < (check.length - 4); i++) {
         if(check[i].checked){
             if(brandStr==""){
                 brandStr = " and (Marca = '"+check[i].parentElement.innerText+"'";
@@ -83,7 +132,7 @@ function filter(device) {
     }
     
     //Controllo checkbox OS
-    for (i = 11; i < 14; i++) {
+    for (i = (check.length - 4); i < (check.length - 1); i++) {
         if(check[i].checked){
             if(OSStr==""){
                 OSStr = " and (OS = '"+check[i].parentElement.innerText+"'";
@@ -97,11 +146,11 @@ function filter(device) {
     }
     
     //Controllo checkbox promozioni
-    if(check[i].checked){
+    if(check[check.length - 1].checked){
         offerStr = " and Sconto > 0"
     }
     
-    filter = typeStr + brandStr + OSStr + offerStr;
+    filter = typeStr + priceStr + inchStr + brandStr + OSStr + offerStr;
     
     if (window.XMLHttpRequest) {
         // code for IE7+, Firefox, Chrome, Opera, Safari
@@ -112,7 +161,7 @@ function filter(device) {
     }
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            document.getElementById("Smartphone-device").innerHTML = xmlhttp.responseText;
+            document.getElementById(device+"-device").innerHTML = xmlhttp.responseText;
         }
     };
     xmlhttp.open("GET", "filter.php?d="+device+"&f="+filter, true);
