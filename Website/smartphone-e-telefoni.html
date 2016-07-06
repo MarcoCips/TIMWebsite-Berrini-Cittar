@@ -10,9 +10,9 @@
     </head>
     
     <body style="text-align:center" onload="filter('Smartphone')">
-        <ul>
+        <ul id="menu">
             <div class="top-menu">
-                <a href="homepage.html">
+                <a href="index.html">
                     <img style="float:left" src="pics/icons/Nuovo%20Logo%20TIM.jpg" alt="Nuovo logo TIM" width="200" height="100"/>
                 </a>
 
@@ -54,16 +54,15 @@
             </div>
         </ul>
         
-        <div class="page">
+        <div class="page"><br>
             <ol class="breadcrumb">
                 <li><a href="homepage.html">Home</a></li>                      
                 <li><a href="dispositivi.html">Dispositivi</a></li>
                 <li class="active">Smartphone e telefoni</li>
             </ol>
-            
             <div class="filter">
                 <h3>Filtra per...</h3><br>
-                
+
                 <h4>Tipologia</h4>
                 <div class="checkbox">
                     <label><input class="cType" type="checkbox" value="" onclick="filter('Smartphone')">Smartphone</label>
@@ -74,7 +73,7 @@
                 <div class="checkbox">
                     <label><input class="cType" type="checkbox" value="" onclick="filter('Smartphone')">Telefoni fissi</label>
                 </div>
-                
+
                 <h4>Prezzo</h4>
                 <div class="checkbox">
                     <label><input class="cPrice" type="checkbox" value="" onclick="filter('Smartphone')">&#60; 200</label>
@@ -88,7 +87,7 @@
                 <div class="checkbox">
                     <label><input class="cPrice" type="checkbox" value="" onclick="filter('Smartphone')">&#62; 600</label>
                 </div>
-                
+
                 <h4>Marca</h4>
                 <div class="checkbox">
                     <label><input class="cBrand" type="checkbox" value="" onclick="filter('Smartphone')">Apple</label>
@@ -102,7 +101,7 @@
                 <div class="checkbox">
                     <label><input class="cBrand" type="checkbox" value="" onclick="filter('Smartphone')">Samsung</label>
                 </div>
-                
+
                 <h4>Sistema operativo</h4>
                 <div class="checkbox">
                     <label><input class="cOS" type="checkbox" value="" onclick="filter('Smartphone')">Android</label>
@@ -113,14 +112,14 @@
                 <div class="checkbox">
                     <label><input class="cOS" type="checkbox" value="" onclick="filter('Smartphone')">Windows</label>
                 </div>
-                
+
                 <h4>Promozioni</h4>
                 <div class="checkbox">
                     <label id="provaa"><input class="cOffer" type="checkbox" value="" onclick="filter('Smartphone')">In offerta</label>
                 </div>
             </div>
 
-            <div id="Smartphone-device" style="display: inline-block">
+            <div id="Smartphone-device" class="section" style="width:800px;float:right;">
             </div>
         </div>
     </body>

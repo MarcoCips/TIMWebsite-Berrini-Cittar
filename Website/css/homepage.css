@@ -24,7 +24,7 @@
     float: left;
     padding: 4;
     margin-top: 15px;
-    width: 300px;
+    width: 180px;
     height: 300px;
     font-size: 30px;
     text-align: left;
@@ -43,6 +43,7 @@ hr {
 
 .section div {
     display: inline-block;
+    margin-bottom: 20px;
 }
 
 .device {

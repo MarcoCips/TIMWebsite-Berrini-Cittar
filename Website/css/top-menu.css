@@ -2,11 +2,13 @@ html *
 {
    font-family: sans-serif;
 }
-ul {
+
+ul#menu {
     list-style-type: none;
     margin: -10;
     padding: 0;
     background-color: #003c7f;
+    min-width:1020px;
 }
 
 .top-menu-button a {

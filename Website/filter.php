@@ -3,6 +3,7 @@
     <head>
         <link rel="stylesheet" href="css/homepage.css">
         <link rel="stylesheet" href="css/top-menu.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     </head>
     <body>
 
@@ -19,7 +20,10 @@
         $sql="SELECT * FROM " . $device . " WHERE 1=1" . $filter;
         $result = mysqli_query($con,$sql);
         while($row = mysqli_fetch_array($result)) {
-            echo "<div class='device'>";
+            if($row['Sito']){
+                echo "<a href='" . str_replace(' ','-',$row['Nome']) . ".html'>";
+            }
+            echo "<div href='apple-iphone-6s.html' class='device'>";
             if($device=='Smartphone'){
                 echo "<img src='pics/phones/" . $row['Nome'] . ".jpg'/>";
             } else if($device=='Tablet') {
@@ -33,6 +37,9 @@
                 echo "<h3>" . $row['Prezzo'] . " €</h3>";
             }
             echo "</div>";
+            if($row['Sito']){
+                echo "</a>";
+            }
         }
         mysqli_close($con);
     ?>
