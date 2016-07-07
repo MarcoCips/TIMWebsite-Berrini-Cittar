@@ -39,6 +39,7 @@ function show(number) {
 
 function filter(device) {
     "use strict";
+    
     var xmlhttp, i;
     var filter = "";
     
@@ -52,42 +53,63 @@ function filter(device) {
     var offerStr = "";
     
     //Controllo checkbox tipologia
-    for (i = 0; i < 3; i++) {
-        if(check[i].checked){
+    if(device=="Smartphone-Tablet"){
+        if(check[0].checked){
+            typeStr = " and (Tipologia = 'Smartphone' or Tipologia = 'iPhone'";
+        }
+        if(check[1].checked){
+            if(typeStr==""){
+                typeStr = " and (Tipologia = 'Tablet' or Tipologia = 'iPad'";
+            } else {
+                typeStr += " or Tipologia = 'Tablet' or Tipologia = 'iPad'";
+            }
+        }
+        if(check[2].checked){
             if(typeStr==""){
                 typeStr = " and (Tipologia = '"+check[i].parentElement.innerText+"'";
             } else {
                 typeStr += " or Tipologia = '"+check[i].parentElement.innerText+"'";
             }
         }
+    } else {
+        for (i = 0; i < 3; i++) {
+            if(check[i].checked){
+                if(typeStr==""){
+                    typeStr = " and (Tipologia = '"+check[i].parentElement.innerText+"'";
+                } else {
+                    typeStr += " or Tipologia = '"+check[i].parentElement.innerText+"'";
+                }
+            }
+        }
     }
+    
     if(typeStr!=""){
         typeStr += ")";
     }
     
     //Controllo checkbox prezzo
     if(check[3].checked){
-        priceStr = " and (Prezzo < 200";
+        priceStr = " and ((Prezzo - Sconto) < 200";
     }
     if(check[4].checked){
         if(priceStr==""){
-            priceStr = " and ((Prezzo >= 200 and Prezzo < 400)";
+            priceStr = " and (((Prezzo - Sconto) >= 200 and (Prezzo - Sconto) < 400)";
         } else {
-            priceStr += " or (Prezzo >= 200 and Prezzo < 400)";
+            priceStr += " or ((Prezzo - Sconto) >= 200 and (Prezzo - Sconto) < 400)";
         }
     }
     if(check[5].checked){
         if(priceStr==""){
-            priceStr = " and ((Prezzo >= 400 and Prezzo < 600)";
+            priceStr = " and (((Prezzo - Sconto) >= 400 and (Prezzo - Sconto) < 600)";
         } else {
-            priceStr += " or (Prezzo >= 400 and Prezzo < 600)";
+            priceStr += " or ((Prezzo - Sconto) >= 400 and (Prezzo - Sconto) < 600)";
         }
     }
     if(check[6].checked){
         if(priceStr==""){
-            priceStr = " and (Prezzo >= 600";
+            priceStr = " and ((Prezzo - Sconto) >= 600";
         } else {
-            priceStr += " or Prezzo >= 600";
+            priceStr += " or (Prezzo - Sconto) >= 600";
         }
     }
     if(priceStr!=""){
