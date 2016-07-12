@@ -18,16 +18,16 @@
 
         mysqli_select_db($con,"my_timhyp53");
         if(strpos($device, '-') !== false){
-            $sql="SELECT Nome,Prezzo,Sconto,Tipologia FROM Smartphone WHERE (1=1" . $filter . ") UNION SELECT Nome,Prezzo,Sconto,Tipologia FROM Tablet WHERE (1=1" . $filter . ")";
+            $sql="SELECT Nome,Prezzo,Sconto,Tipologia,Sito FROM Smartphone WHERE (1=1" . $filter . ") UNION SELECT Nome,Prezzo,Sconto,Tipologia,Sito FROM Tablet WHERE (1=1" . $filter . ")";
         } else {
-            $sql="SELECT Nome,Prezzo,Sconto FROM " . $device . " WHERE 1=1" . $filter;
+            $sql="SELECT Nome,Prezzo,Sconto,Sito FROM " . $device . " WHERE 1=1" . $filter;
         }
         $result = mysqli_query($con,$sql);
         while($row = mysqli_fetch_array($result)) {
             if($row['Sito']){
                 echo "<a href='" . str_replace(' ','-',$row['Nome']) . ".html'>";
             }
-            echo "<div href='apple-iphone-6s.html' class='device'>";
+            echo "<div class='device'>";
             if($device=='Smartphone'){
                 echo "<img src='pics/phones/" . $row['Nome'] . ".jpg'/>";
             } else if($device=='Tablet') {

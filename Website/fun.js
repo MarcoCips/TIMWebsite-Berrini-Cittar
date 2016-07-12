@@ -3,7 +3,7 @@ function changeImg(img) {
     document.getElementById('phone-img').src = img;
 }
 
-function show(number) {
+function show() {
     "use strict";
     var xmlhttpPhone, xmlhttpTablet;
     if (window.XMLHttpRequest) {
@@ -18,7 +18,7 @@ function show(number) {
             document.getElementById("Smartphone-device").innerHTML = xmlhttpPhone.responseText;
         }
     };
-    xmlhttpPhone.open("GET", "get-phones.php?q=Smartphone&n="+parseInt(number), true);
+    xmlhttpPhone.open("GET", "get-phones.php?q=Smartphone", true);
     xmlhttpPhone.send();
     
     if (window.XMLHttpRequest) {
@@ -33,8 +33,15 @@ function show(number) {
             document.getElementById("Tablet-device").innerHTML = xmlhttpTablet.responseText;
         }
     };
-    xmlhttpTablet.open("GET", "get-phones.php?q=Tablet&n="+parseInt(number), true);
+    xmlhttpTablet.open("GET", "get-phones.php?q=Tablet", true);
     xmlhttpTablet.send();
+}
+
+function setType(){
+    var str = window.location.href.split("#");
+    if(str.length > 1){
+        document.getElementById(str[str.length-1]+"-cb").checked = true;
+    }
 }
 
 function filter(device) {

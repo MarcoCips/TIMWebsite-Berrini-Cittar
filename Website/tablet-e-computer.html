@@ -3,13 +3,15 @@
         <title>Tablet e computer</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="stylesheet" href="css/homepage.css">
+        <link rel="stylesheet" href="css/device-div.css">
         <link rel="stylesheet" href="css/top-menu.css">
+        <link rel="stylesheet" href="css/breadcrumbs.css">
+        <link rel="stylesheet" href="css/filter.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <script type="text/javascript" src="fun.js"></script>
     </head>
     
-    <body style="text-align:center" onload="filter('Tablet')">
+    <body style="text-align:center" onload="setType(); filter('Tablet');">
         <ul id="menu">
             <div class="top-menu">
                 <a href="index.html">
@@ -65,10 +67,10 @@
                 
                 <h4>Tipologia</h4>
                 <div class="checkbox">
-                    <label><input type="checkbox" value="" onclick="filter('Tablet')">Tablet</label>
+                    <label><input id="tablet-cb" type="checkbox" value="" onclick="filter('Tablet')">Tablet</label>
                 </div>
                 <div class="checkbox">
-                    <label><input type="checkbox" value="" onclick="filter('Tablet')">iPad</label>
+                    <label><input id="ipad-cb" type="checkbox" value="" onclick="filter('Tablet')">iPad</label>
                 </div>
                 <div class="checkbox">
                     <label><input type="checkbox" value="" onclick="filter('Tablet')">Computer</label>

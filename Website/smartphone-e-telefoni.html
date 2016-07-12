@@ -3,13 +3,15 @@
         <title>Smartphone e telefoni</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="stylesheet" href="css/homepage.css">
+        <link rel="stylesheet" href="css/device-div.css">
         <link rel="stylesheet" href="css/top-menu.css">
+        <link rel="stylesheet" href="css/breadcrumbs.css">
+        <link rel="stylesheet" href="css/filter.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <script type="text/javascript" src="fun.js"></script>
     </head>
     
-    <body style="text-align:center" onload="filter('Smartphone')">
+    <body style="text-align:center" onload="setType(); filter('Smartphone');">
         <ul id="menu">
             <div class="top-menu">
                 <a href="index.html">
@@ -65,10 +67,10 @@
 
                 <h4>Tipologia</h4>
                 <div class="checkbox">
-                    <label><input class="cType" type="checkbox" value="" onclick="filter('Smartphone')">Smartphone</label>
+                    <label><input id="smart-cb" class="cType" type="checkbox" value="" onclick="filter('Smartphone')">Smartphone</label>
                 </div>
                 <div class="checkbox">
-                    <label><input class="cType" type="checkbox" value="" onclick="filter('Smartphone')">iPhone</label>
+                    <label><input id="iphone-cb" class="cType" type="checkbox" value="" onclick="filter('Smartphone')">iPhone</label>
                 </div>
                 <div class="checkbox">
                     <label><input class="cType" type="checkbox" value="" onclick="filter('Smartphone')">Telefoni fissi</label>

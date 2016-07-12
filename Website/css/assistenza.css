@@ -1,0 +1,22 @@
+.category {
+    width:250px;
+    border: 1px solid;
+    margin-bottom: 20px;
+    margin-left:20px;
+    padding: 20px;
+    display:block;
+    float:left;
+}
+.page .section{
+    text-align: center;
+}
+.section {
+    width:800px;
+    margin: 0 auto;
+}
+
+.ast-sec {
+    width:450px;
+    float:right;
+    text-align:left;
+}

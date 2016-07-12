@@ -66,3 +66,12 @@ li a:hover {
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: #f1f1f1}
+
+.page {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+hr {
+    width: 1000px;
+}

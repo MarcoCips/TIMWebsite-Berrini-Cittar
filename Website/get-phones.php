@@ -9,7 +9,6 @@
 
     <?php
         $type = strval($_GET['q']);
-        $number = intval($_GET['n']);
 
         $con = mysqli_connect('localhost','timhyp53','','my_timhyp53');
         if (!$con) {
@@ -17,10 +16,12 @@
         }
 
         mysqli_select_db($con,"my_timhyp53");
-        $sql="SELECT * FROM " . $type;
+        $sql="SELECT * FROM " . $type . " LIMIT 3";
         $result = mysqli_query($con,$sql);
-        $i = 0 ;
-        while(($row = mysqli_fetch_array($result)) && ($i < $number)) {
+        while($row = mysqli_fetch_array($result)) {
+            if($row['Sito']){
+                echo "<a href='" . str_replace(' ','-',$row['Nome']) . ".html'>";
+            }
             echo "<div class='device'>";
             if($type == "Smartphone"){
                 echo "<img src='pics/phones/" . $row['Nome'] . ".jpg'/>";
@@ -35,7 +36,9 @@
                 echo "<h3>" . $row['Prezzo'] . " €</h3>";
             }
             echo "</div>";
-            $i++;
+            if($row['Sito']){
+                echo "</a>";
+            }
         }
         mysqli_close($con);
     ?>

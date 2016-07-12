@@ -1,0 +1,32 @@
+.thumb-container {
+    width: 80px;
+    float: left;
+    margin-left: 20px;
+}
+
+.thumb-container img {
+    width: 80px;
+}
+
+.phone-details {
+    width: 900px;
+    float:right;
+}
+
+.phone-details > * {
+    display: table-row;
+    vertical-align: middle;
+}
+
+.phone-details * {
+    float: left;
+}
+
+.phone-details img {
+    width: 400px;
+}
+
+.phone-recap > * {
+    width: 500px;
+    text-align: left;
+}
