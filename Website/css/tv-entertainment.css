@@ -3,3 +3,26 @@
     width : 1000px;
     height : 300px;
 }
+
+.offer {
+    float:right;
+    width: 480px;
+    height: 200px;
+    background-color: black;
+    margin: 10
+}
+
+.body {
+    display: inline-block;
+    margin-top: 80px;
+}
+
+h4 {
+    font-weight: bold;
+    
+    
+}
+
+h2 {
+    font-weight: 800;
+}
