@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>titolo</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="css/top-menu.css">
+        <link rel="stylesheet" href="css/breadcrumbs.css">
+        <link rel="stylesheet" href="css/dispositivi.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    </head>
+    
+    <body style="text-align:center">
+        <ul id="menu">
+            <div class="top-menu">
+                <a href="index.html">
+                    <img style="float:left" src="pics/icons/Nuovo%20Logo%20TIM.jpg" alt="Nuovo logo TIM" width="200" height="100"/>
+                </a>
+
+                <li class="top-menu-button">
+                    <a href="promozioni.html">Promozioni</a>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">Smartphone</a>
+                        <a href="#">Tablet</a>
+                        <a href="#">Smart Life</a>
+                    </div>
+                </li>
+
+                <li class="top-menu-button">
+                    <a href="dispositivi.html">Dispositivi</a>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">Smartphone</a>
+                        <a href="#">Tablet</a>
+                        <a href="#">Modem e networking</a>
+                    </div>
+                </li>
+
+                <li class="top-menu-button">
+                    <a href="smart-life.html">Smart Life</a>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">Offerte</a>
+                        <a href="#">TV e Entertainment</a>
+                    </div>
+                </li>
+
+                <li class="top-menu-button">
+                    <a href="assistenza.html">Assistenza</a>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">Gestione linea</a>
+                        <a href="#">Controllo costi</a>
+                        <a href="#">Supporto tecnico</a>
+                        <a href="#">Smart Life</a>
+                    </div>
+                </li>
+            </div>
+        </ul>
+        
+        <div class="page">
+            <ol class="breadcrumb">
+                <li><a href="homepage.html">Home</a></li>                      
+                <li><a href="assistenza.html">Assistenza</a></li>
+                <li class="active">Gestione linea e servizi</li>
+            </ol>
+
+            <div class="to-section">
+                <a href="#section-smart">Fisso</a>
+                <a href="#section-tablet">Mobile</a>
+                <a href="#section-modem"></a>
+            </div><br>
+            
+            <div id="section-smart" class="section">
+                <a href="smartphone-e-telefoni.html"><h1>Smartphone e telefoni</h1></a>
+                <div class="sub-menu">
+                    <a href="smartphone-e-telefoni.html">Tutti</a><br>
+                    <a href="smartphone-e-telefoni.html#smart">Smartphone</a><br>
+                    <a href="smartphone-e-telefoni.html#iphone">iPhone</a><br>
+                    <a>Telefoni fissi</a><br>
+                </div><br>
+            </div><br>
+
+            <hr>
+
+            <div id="section-tablet" class="section">
+                <a href="tablet-e-computer.html"><h1>Tablet e computer</h1></a>
+                <div class="sub-menu">
+                    <a href="tablet-e-computer.html">Tutti</a><br>
+                    <a href="tablet-e-computer.html#tablet">Tablet</a><br>
+                    <a href="tablet-e-computer.html#ipad">iPad</a><br>
+                    <a onclick="show(3)">Computer</a><br>
+                </div><br>
+            </div><br>
+
+            <hr>
+
+            <div id="section-modem" class="section">
+                <a href="modem-e-networking.html"><h1>Modem e networking</h1></a>
+                <div class="sub-menu">
+                    <a href="#">Tutti</a><br>
+                    <a href="#">Modem</a><br>
+                    <a href="#">Cose</a><br>
+                </div><br>
+            </div><br>
+        </div>
+    </body>
+</html>
