@@ -1,0 +1,91 @@
+.banner{
+    background-image: url(../pics/smart-life/casa-famiglia/casa-famiglia.jpg);
+    width : 1000px;
+    height : 300px;
+}
+
+.tag {
+    width: 100px;
+    height: 100px;
+}
+
+.tags {
+    display: inline-block;
+}
+
+.bottone {
+    margin-top: 48px;
+}
+
+.box{
+    width: 300;
+
+}
+
+.testo {
+    display: inline;
+}
+
+.descrizione{
+    border-style: solid;
+    height: 240;
+    width: 600;
+}
+
+/* Style the list */
+ul.tab {
+    list-style-type: none;
+    margin: auto;
+    margin-top: 20;
+    margin-bottom: 20;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width:650px;
+}
+
+/* Float the list items side by side */
+ul.tab li {
+
+    float: left;
+    width:200px;
+}
+
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: black;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 20px;
+    width:100px;
+    height: 100px;
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {background-color: #ddd;}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .selected {background-color: #ccc;}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+    width: 950px;
+    margin: inherit;
+}
+
+.tabcontent p {
+    width:500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.tabcontent p span {
+    width: 350px;
+    float: right;
+}
