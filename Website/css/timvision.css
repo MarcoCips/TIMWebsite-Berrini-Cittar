@@ -1,0 +1,17 @@
+.banner{
+    background-image: url(../pics/smart-life/tv-entertainment/timvisioooo.jpg);
+    width : 1000px;
+    height : 300px;
+}
+
+.corpo {
+    margin-top: 40;
+}
+
+.corpo > p{
+    width: 450;
+    float: right;
+    margin-right: 85;
+    font-family: sans-serif;
+    font-weight: 400;
+}

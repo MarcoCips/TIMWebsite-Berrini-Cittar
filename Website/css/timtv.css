@@ -15,8 +15,7 @@ body {font-family: Verdana,sans-serif;margin:0}
 
 .carousel-inner{
     backface-visibility: hidden;
-    background-color: white;
-    height:550;
+    height:650px;
 }
 
 
@@ -26,5 +25,6 @@ body {font-family: Verdana,sans-serif;margin:0}
 }
 
 .carousel-indicators{
-   top:280px; 
+   top:280px;
+    height: 20px;
 }
