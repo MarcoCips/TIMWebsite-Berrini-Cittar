@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <title>GearS</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="css/top-menu.css">
+        <link rel="stylesheet" href="css/breadcrumbs.css">
+        <link rel="stylesheet" href="css/tabs.css">
+        <link rel="stylesheet" href="css/device-details.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <script type="text/javascript" src="fun.js"></script>
+    </head>
+    
+    <body style="text-align:center">
+        <ul id="menu">
+            <div class="top-menu">
+                <a href="index.html">
+                    <img style="float:left" src="pics/icons/Nuovo%20Logo%20TIM.jpg" alt="Nuovo logo TIM" width="200" height="100"/>
+                </a>
+
+                <li class="top-menu-button">
+                    <a href="promozioni.html">Promozioni</a>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">Smartphone</a>
+                        <a href="#">Tablet</a>
+                        <a href="#">Smart Life</a>
+                    </div>
+                </li>
+
+                <li class="top-menu-button">
+                    <a href="dispositivi.html">Dispositivi</a>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">Smartphone</a>
+                        <a href="#">Tablet</a>
+                        <a href="#">Modem e networking</a>
+                    </div>
+                </li>
+
+                <li class="top-menu-button">
+                    <a href="smart-life.html">Smart Life</a>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">Offerte</a>
+                        <a href="#">TV e Entertainment</a>
+                    </div>
+                </li>
+
+                <li class="top-menu-button">
+                    <a href="assistenza.html">Assistenza</a>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">Gestione linea</a>
+                        <a href="#">Controllo costi</a>
+                        <a href="#">Supporto tecnico</a>
+                        <a href="#">Smart Life</a>
+                    </div>
+                </li>
+            </div>
+        </ul><br>
+        
+        <div class="page">
+            <ol class="breadcrumb">
+                <li><a href="homepage.html">Home</a></li>                      
+                <li><a href="dispositivi.html">Dispositivi</a></li>          
+                <li><a href="smartphone-e-telefoni.html">Smartphone e telefoni</a></li>
+                <li>Samsung Galaxy Gear S</li>
+            </ol>
+            <div style="height:400px">
+                <div class="thumb-container">
+                    <a href="#">
+                        <img class="thumbnail" src="pics/smart-life/salute-benessere/samsung-galaxy-gear-s-1_0.jpg" onclick="changeImg(src)"/>
+                    </a>
+                    <a href="#">
+                        <img class="thumbnail" src="pics/smart-life/salute-benessere/samsung-galaxy-gear-s-2_0.jpg" onclick="changeImg(src)"/>
+                    </a>
+                </div>
+                <div class="phone-details">
+                    <img style="display: table-cell; vertical-align:top" id="phone-img" src="pics/smart-life/salute-benessere/samsung-galaxy-gear-s-1_0.jpg"/>
+                    <div class="phone-recap" style="width: 500px">
+                        <h1>Samsung Galaxy Gears S</h1>
+                        <h3>Caratteristiche:</h3>
+                        <h5 style="margin-left: 20px">
+                            <li>
+                                Orologio Multifunzione Intelligente
+                            </li><br>
+                            <li>
+                                Display 2” curved SuperAMOLED
+                            </li><br>
+                            <li>
+                               Processore DualCore 1GHz
+                            </li><br>
+                            <li>
+                                Certificazione IP67
+                            </li><br>
+                        </h5>
+                        <h3>Prezzo:</h3>
+                        <h2 style="margin-left: 20px">349.90 €</h2>
+                        <button type="button" onclick="#" style="width:128px;">
+                            <h3 style="margin: 10px;">Acquista</h3>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <ul class="tab" >
+                <li><a href="#" class="tablinks selected" onclick="openTab(event, 'description')">Descrizione</a></li>
+                <li><a href="#" class="tablinks" onclick="openTab(event, 'specs')">Specifiche tecniche</a></li>
+            </ul>
+
+            <div id="description" class="tabcontent" style="display: block">
+                <p>Orologio Multifunzione Intelligente.<br>Display 2” curved SuperAMOLED.<br>Processore DualCore 1GHz.<br>Certificazione IP67.<br>Touch ID.<br>Connessioni Wi-Fi e 4G LTE più veloci.<br>Batteria a lunga durata.<br>E ancora, iOS 9 e iCloud.<br>Il tutto in un elegante guscio unibody.</p>
+            </div>
+
+            <div id="specs" class="tabcontent" >
+                <p>Notifiche, Chiamate, SMS, S Health,Lettore musicale, Meteo, Navigatore, Comandi vocali, Running
+Download ulteriori applicazioni tramite il Samsung Gear App<br>
+                </p>
+                <hr style="width: 725px">
+                <p>Display          <span>Touch da 2”</span><br><br>
+                    Connettività			<span>HSDPA 21Mbps/UMTS/EDGE/GPRS - Wi-Fi - Bluetooth - **Micro USB</span><br><br>
+                    Frequenze		<span>2G: 900/1800 - 3G: 900/2100</span><br><br>
+                    Formato SIM			<span>Nano Sim</span><br><br>
+                    Memoria Interna			<span>4GB</span><br><br>
+                </p>
+                
+            </div>
+        </div>
+    </body>
+</html>
