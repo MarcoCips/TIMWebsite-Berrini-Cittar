@@ -26,7 +26,7 @@
     text-align: left;
 }
 
-.sub-menu a {
+.sub-menu > a, .sub-menu > h3 {
     position: absolute;
     font-size: 25px;
     margin-left: 50px;
