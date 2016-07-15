@@ -1,0 +1,30 @@
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;margin:0}
+
+/* Slideshow container */
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.carousel-control.left, .carousel-control.right{
+    width: auto;
+    height: 300;
+    color: black;
+}
+
+.carousel-inner{
+    backface-visibility: hidden;
+    height:650px;
+}
+
+
+.testo {
+    margin: auto;
+    width: 447px;
+}
+
+.carousel-indicators{
+   top:280px;
+    height: 20px;
+}
