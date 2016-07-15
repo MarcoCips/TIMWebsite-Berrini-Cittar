@@ -66,10 +66,10 @@
             <div style="height:400px">
                 <div class="thumb-container">
                     <a href="#">
-                        <img class="thumbnail" src="pics/tablets/Apple%20iPad%20Pro%20128GB.jpg" onclick="changeImg(src)"/>
+                        <img class="thumbnail" src="pics/tablets/Apple%20iPad%20Pro%20128GB.jpg" onclick="changeImg(src,event)"/>
                     </a>
                     <a href="#">
-                        <img class="thumbnail" src="pics/tablets/Apple%20iPad%20Pro%20128GB%202.jpg" onclick="changeImg(src)"/>
+                        <img class="thumbnail" src="pics/tablets/Apple%20iPad%20Pro%20128GB%202.jpg" onclick="changeImg(src,event)"/>
                     </a>
                 </div>
                 <div class="phone-details">
@@ -93,9 +93,12 @@
                         </h5>
                         <h3>Prezzo:</h3>
                         <h2 style="margin-left: 20px">1249.90 €</h2>
-                        <button type="button" onclick="#" style="width:128px;">
-                            <h3 style="margin: 10px;">Acquista</h3>
-                        </button>
+                        <div style="display:table-cell">
+                            <button type="button" style="width:128px;float:left">
+                                <h3 style="margin: 10px;">Acquista</h3>
+                            </button>
+                            <h4>&nbsp;oppure <a href="#offerte">abbinaci un'offerta</a></h4>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -132,6 +135,26 @@
                     Batteria				<span>Fino a 10 ore di autonomia</span><br><br>
                 </p>
                 
+            </div>
+            
+            <hr>
+        </div>
+        
+        <div id="offerte">
+            <h2>Offerte correlate</h2>
+            <div class="section">
+                <img src="pics/smart-life/offerte/blocchetto_1_internet_start.jpg"/>
+                <div class="desc">
+                    <h3>Internet start</h3>
+                    <p><b>2GB</b> di Internet per Tablet, Chiavetta o Smartphone. <b>4GB</b> se la tua linea di casa è TIM.<br>SOLO ONLINE</p>
+                    <h3>10€/4 sett.</h3>
+                    <button>
+                        Dettagli
+                    </button>
+                    <button>
+                        Acquista con<br>quest'offerta
+                    </button>
+                </div>
             </div>
         </div>
     </body>

@@ -66,10 +66,10 @@
             <div style="height:400px">
                 <div class="thumb-container">
                     <a href="#">
-                        <img class="thumbnail" src="pics/phones/Apple%20iPhone%206S.jpg" onclick="changeImg(src)"/>
+                        <img class="thumbnail" src="pics/phones/Apple%20iPhone%206S.jpg" onclick="changeImg(src,event)"/>
                     </a>
                     <a href="#">
-                        <img class="thumbnail" src="pics/phones/Apple%20iPhone%206S%202.jpg" onclick="changeImg(src)"/>
+                        <img class="thumbnail" src="pics/phones/Apple%20iPhone%206S%202.jpg" onclick="changeImg(src,event)"/>
                     </a>
                 </div>
                 <div class="phone-details">
@@ -93,9 +93,12 @@
                         </h5>
                         <h3>Prezzo:</h3>
                         <h2 style="margin-left: 20px">789.90 €</h2>
-                        <button type="button" onclick="#" style="width:128px;">
-                            <h3 style="margin: 10px;">Acquista</h3>
-                        </button>
+                        <div style="display:table-cell">
+                            <button type="button" style="width:128px;float:left">
+                                <h3 style="margin: 10px;">Acquista</h3>
+                            </button>
+                            <h4>&nbsp;oppure <a href="#offerte">abbinaci un'offerta</a></h4>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -121,6 +124,56 @@
                     Videocamera			<span>Videocamera FaceTime HD con Retina Flash (foto da 5MP)</span><br><br>
                     Connettivita			<span>4G LTE Advanced1 e Wi-Fi 802.11a/b/g/n/ac con tecnologia MIMO</span><br><br></p>
                 
+            </div>
+        </div>
+        
+        <hr>
+        
+        <div id="offerte">
+            <h2>Offerte correlate</h2>
+            <div class="section">
+                <img src="pics/smart-life/offerte/blocchetto-1-tim-young-music-digita-summer.jpg"/>
+                <div class="desc">
+                    <h3>TIM Young&amp;Music Full Digital</h3>
+                    <p>Parli, navighi, ascolti musica senza consumare GB e hai <b>3GB in più per l'estate!</b></p>
+                    <h3>14€/4 sett.</h3>
+                    <button onclick="location.href='timyoung.html'">
+                        Dettagli
+                    </button>
+                    <button>
+                        Acquista con<br>quest'offerta
+                    </button>
+                </div>
+            </div>
+            <hr>
+            <div class="section">
+                <img src="pics/smart-life/offerte/blocchetto_1_internet_start.jpg"/>
+                <div class="desc">
+                    <h3>Internet start</h3>
+                    <p><b>2GB</b> di Internet per Tablet, Chiavetta o Smartphone. <b>4GB</b> se la tua linea di casa è TIM.<br>SOLO ONLINE</p>
+                    <h3>10€/4 sett.</h3>
+                    <button>
+                        Dettagli
+                    </button>
+                    <button>
+                        Acquista con<br>quest'offerta
+                    </button>
+                </div>
+            </div>
+            <hr>
+            <div class="section">
+                <img src="pics/smart-life/offerte/International1000_1_4.jpg"/>
+                <div class="desc">
+                    <h3>TIM International 1000</h3>
+                    <p>1000 min. verso tutti e 3GB 4G</p>
+                    <h3>10€/mese</h3>
+                    <button>
+                        Dettagli
+                    </button>
+                    <button>
+                        Acquista con<br>quest'offerta
+                    </button>
+                </div>
             </div>
         </div>
     </body>

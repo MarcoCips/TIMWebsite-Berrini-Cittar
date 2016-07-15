@@ -16,9 +16,6 @@
 .phone-details > * {
     display: table-row;
     vertical-align: middle;
-}
-
-.phone-details * {
     float: left;
 }
 
@@ -29,4 +26,33 @@
 .phone-recap > * {
     width: 500px;
     text-align: left;
+}
+
+.section {
+    overflow-y: hidden;
+    width:750px;
+    margin: 0 auto;
+    display:inline-block;
+}
+
+.section img{
+    float:left;
+    width: 300px;
+}
+
+.section .desc{
+    text-align: center;
+    float:right;
+    width: 450px;
+}
+
+.desc p {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.desc button {
+    width:100px;
+    height:50;
+    vertical-align: top;
 }

@@ -1,6 +1,7 @@
-function changeImg(img) {
+function changeImg(img,evt) {
     "use strict";
     document.getElementById('phone-img').src = img;
+    evt.preventDefault();
 }
 
 function show() {
