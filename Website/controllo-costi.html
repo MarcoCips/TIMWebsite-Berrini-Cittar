@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <title>titolo</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="css/top-menu.css">
+        <link rel="stylesheet" href="css/breadcrumbs.css">
+        <link rel="stylesheet" href="css/assistenza.css">
+        <link rel="stylesheet" href="css/dispositivi.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <script type="text/javascript" src="fun.js"></script>
+    </head>
+    
+    <body style="text-align:center">
+        <ul id="menu">
+            <div class="top-menu">
+                <a href="index.html">
+                    <img style="float:left" src="pics/icons/Nuovo%20Logo%20TIM.jpg" alt="Nuovo logo TIM" width="200" height="100"/>
+                </a>
+
+                <li class="top-menu-button">
+                    <a href="promozioni.html">Promozioni</a>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">Smartphone</a>
+                        <a href="#">Tablet</a>
+                        <a href="#">Smart Life</a>
+                    </div>
+                </li>
+
+                <li class="top-menu-button">
+                    <a href="dispositivi.html">Dispositivi</a>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">Smartphone</a>
+                        <a href="#">Tablet</a>
+                        <a href="#">Modem e networking</a>
+                    </div>
+                </li>
+
+                <li class="top-menu-button">
+                    <a href="smart-life.html">Smart Life</a>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">Offerte</a>
+                        <a href="#">TV e Entertainment</a>
+                    </div>
+                </li>
+
+                <li class="top-menu-button">
+                    <a href="assistenza.html">Assistenza</a>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">Gestione linea</a>
+                        <a href="#">Controllo costi</a>
+                        <a href="#">Supporto tecnico</a>
+                        <a href="#">Smart Life</a>
+                    </div>
+                </li>
+            </div>
+        </ul>
+        
+        <div class="page">
+            <ol class="breadcrumb">
+                <li><a href="homepage.html">Home</a></li>                      
+                <li><a href="assistenza.html">Assistenza</a></li>
+                <li class="active">Gestione linea e servizi</li>
+            </ol>
+            
+            <ul class="tab" style="width:600px;">
+                <li><a href="#fisso" class="tablinks selected" onclick="select(event)">Fisso</a></li>
+                <li><a href="#mobile" class="tablinks" onclick="select(event)">Mobile</a></li>
+                <li><a href="#online" class="tablinks" onclick="select(event)">Cosa puoi fare online</a></li>
+            </ul>
+
+            <div id="fisso" class="tabcontent" style="display: block">
+                <h2>Fisso</h2>
+                
+                <h3>Fatture e Pagamenti</h3>
+                
+                <h5>Come leggere la fattura della linea fissa</h5>
+                <h5>Come pagare la fattura della linea fissa</h5>
+                <h5>Come domiciliare la fattura della linea fissa</h5>
+                <h5>Richiedere un rimborso</h5>
+                <h5>SEPA (Single Euro Payments Area)</h5>
+            </div>
+
+            <div id="mobile" class="tabcontent">
+                <a href="#" style="float: right">Torna su<span class="glyphicon glyphicon-chevron-up"/></a>
+                <h2>Mobile</h2>
+                
+                <h3>Ricaricabile</h3>
+                
+                <h5>Verifica credito residuo e bonus disponibili per i clienti Prepagati</h5>
+                <h5>Dettaglio delle chiamate per clienti Ricaricabili</h5>
+                <h5>Le promozioni e i rinnovi automatici per clienti Ricaricabili</h5>
+                <h5>La domiciliazione sul Conto Corrente per i clienti ricaricabili</h5>
+                
+                <h3>Abbonamento</h3>
+                
+                <h5>Scopri come consultare i consumi della tua linea con abbonamento</h5>
+                <h5>Modalità di pagamento della fattura linea mobile</h5>
+                <h5>Domiciliare la fattura mobile su conto corrente</h5>
+                
+                <h3>Per navigare in Internet</h3>
+                
+                <h5>Tariffa base per navigare da Smartphone, PC e Tablet - Flat Day</h5>
+                <h5>Soglia di protezione e blocco del traffico dati</h5>
+                <h5>Conoscere i minuti a disposizione della tua chiavetta</h5>
+                
+                <h3>Offerte rateizzate</h3>
+                
+                <h5>Cambio carta di credito offerte rateizzate su Ricaricabile</h5>
+                <h5>Le offerte rateizzate</h5>
+                <h5>Recesso anticipato per le offerte rateizzate attivate su una linea Ricaricabile</h5>
+                <h5>Recesso anticipato per le offerte rateizzate attivate su una linea con Abbonamento</h5>
+            </div>
+
+            <div id="online" class="tabcontent">
+                <a href="#" style="float: right">Torna su<span class="glyphicon glyphicon-chevron-up"/></a>
+                <h2>Cosa puoi fare online</h2>
+                
+                <h3>MyTIM Fisso</h3>
+
+                <h5>MyTIM Fisso (controllo costi)</h5>
+                <h5>Il mio conto online</h5>
+                <h5>Pagamenti</h5>
+                    
+                <h3>MyTIM Mobile</h3>
+
+                <h5>MyTIM Mobile (controllo costi)</h5>
+                <h5>Verifica online il tuo traffico</h5>
+                <h5>Il rendiconto TIM Online</h5>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,156 @@
+<html>
+    <head>
+        <title>titolo</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="css/top-menu.css">
+        <link rel="stylesheet" href="css/breadcrumbs.css">
+        <link rel="stylesheet" href="css/assistenza.css">
+        <link rel="stylesheet" href="css/dispositivi.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <script type="text/javascript" src="fun.js"></script>
+    </head>
+    
+    <body style="text-align:center">
+        <ul id="menu">
+            <div class="top-menu">
+                <a href="index.html">
+                    <img style="float:left" src="pics/icons/Nuovo%20Logo%20TIM.jpg" alt="Nuovo logo TIM" width="200" height="100"/>
+                </a>
+
+                <li class="top-menu-button">
+                    <a href="promozioni.html">Promozioni</a>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">Smartphone</a>
+                        <a href="#">Tablet</a>
+                        <a href="#">Smart Life</a>
+                    </div>
+                </li>
+
+                <li class="top-menu-button">
+                    <a href="dispositivi.html">Dispositivi</a>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">Smartphone</a>
+                        <a href="#">Tablet</a>
+                        <a href="#">Modem e networking</a>
+                    </div>
+                </li>
+
+                <li class="top-menu-button">
+                    <a href="smart-life.html">Smart Life</a>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">Offerte</a>
+                        <a href="#">TV e Entertainment</a>
+                    </div>
+                </li>
+
+                <li class="top-menu-button">
+                    <a href="assistenza.html">Assistenza</a>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">Gestione linea</a>
+                        <a href="#">Controllo costi</a>
+                        <a href="#">Supporto tecnico</a>
+                        <a href="#">Smart Life</a>
+                    </div>
+                </li>
+            </div>
+        </ul>
+        
+        <div class="page">
+            <ol class="breadcrumb">
+                <li><a href="homepage.html">Home</a></li>                      
+                <li><a href="assistenza.html">Assistenza</a></li>
+                <li class="active">Gestione linea e servizi</li>
+            </ol>
+            
+            <ul class="tab">
+                <li><a href="#smartphone" class="tablinks selected" onclick="select(event)">Smartphone e tablet</a></li>
+                <li><a href="#linea" class="tablinks" onclick="select(event)">Linea telefonica</a></li>
+                <li><a href="#adsl" class="tablinks" onclick="select(event)">ADSL e Fibra</a></li>
+                <li><a href="#navigazione" class="tablinks" onclick="select(event)">Navigazione</a></li>
+            </ul>
+
+            <div id="smartphone" class="tabcontent" style="display: block">
+                <h2>Smartphone e tablet</h2>
+                
+                <h3>Servizi per e dal tuo smartphone</h3>
+                
+                <h5>Assistenza tecnica specializzata con SOSsmartphone</h5>
+                <h5>Buono sconto per cambio telefono</h5>
+                <h5>Assistenza tecnica specializzata con SOS PC</h5>
+                
+                <h3>Configurare la posta</h3>
+                
+                <h5>Configurazione Mail su iPhone</h5>
+                <h5>Configurazione Mail su iPad</h5>
+                <h5>Configurazione Mail su Android</h5>
+                <h5>Configurazione Mail su BlackBerry</h5>
+                
+                <h3>Configurazioni e manuali</h3>
+                
+                <h5>Connettersi a Internet col telefonino</h5>
+                <h5>TIM Mail - Password dimenticata o altri problemi di accesso</h5>
+                <h5>Gestisci e configura la tua TIM Mail su Smartphone e Tablet</h5>
+            </div>
+
+            <div id="linea" class="tabcontent">
+                <a href="#" style="float: right">Torna su<span class="glyphicon glyphicon-chevron-up"/></a>
+                <h2>Linea Telefonica</h2>
+                
+                <h3>Guida ai servizi telefonici</h3>
+                
+                <h5>Memotel</h5>
+                <h5>Avviso di Chiamata</h5>
+                <h5>Trasferimento di Chiamata</h5>
+                <h5>Disabilita Chiamate</h5>
+                
+                <h3>Problemi Linea Telefonica</h3>
+                
+                <h5>Non chiamo e non ricevo telefonate</h5>
+                <h5>Ricevo ma non chiamo</h5>
+                <h5>Chiamo ma non ricevo da un particolare gestore telefonico</h5>
+                <h5>Chiamo ma non ricevo</h5>
+                
+                <h3>Linea ISDN</h3>
+                
+                <h5>Come gestire le chiamate entranti</h5>
+                <h5>Problemi linea ISDN</h5>
+            </div>
+
+            <div id="adsl" class="tabcontent">
+                <a href="#" style="float: right">Torna su<span class="glyphicon glyphicon-chevron-up"/></a>
+                <h2>ADSL e Fibra</h2>
+                
+                <h3>Fibra</h3>
+
+                <h5>Prima installazione</h5>
+                <h5>Modem fibra</h5>
+                <h5>Come telefonare</h5>
+                <h5>Come navigare</h5>
+                    
+                <h3>Modem ADSL</h3>
+
+                <h5>ADSL2+ Wi-Fi N - DA2210</h5>
+                <h5>ADSL2+ Wi-Fi N</h5>
+                <h5>Alice Gate VoIP 2 plus Wi-Fi</h5>
+            </div>
+
+            <div id="navigazione" class="tabcontent">
+                <a href="#" style="float: right">Torna su<span class="glyphicon glyphicon-chevron-up"/></a>
+                <h2>Navigazione</h2>
+                
+                <h3>Impostazioni per la navigazione</h3>
+
+                <h5>Configurazione DNS</h5>
+                <h5>Configurazione browser</h5>
+                <h5>Configurazione firewall</h5>
+                    
+                <h3>Problemi di navigazione</h3>
+
+                <h5>Non mi connetto ad Internet</h5>
+                <h5>Cade la connessione</h5>
+                <h5>Navigo lentamente</h5>
+            </div>
+        </div>
+    </body>
+</html>

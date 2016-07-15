@@ -20,3 +20,60 @@
     float:right;
     text-align:left;
 }
+
+/* Style the list */
+ul.tab {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    max-width:800px;
+    height:86px;
+}
+
+/* Float the list items side by side */
+ul.tab li {
+    float: left;
+    height:inherit;
+    width:200px;
+    border: 1px solid #ccc;
+}
+
+/* Style the links inside the list items */
+ul.tab li a {
+    display:table-cell;
+    vertical-align: middle;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 20px;
+    width:inherit;
+    height:inherit;
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {background-color: #ddd;}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus {background-color: #ccc;}
+
+
+/* Style the tab content */
+.tabcontent {
+    float:left;
+    border-bottom: 1px solid #ccc;
+    width:700px;
+    margin-left: 150px;
+}
+
+.tabcontent * {
+    text-align: left;
+    margin-left: 10px;
+}
+
+.tabcontent h5 {
+    margin-left: 30px;
+}

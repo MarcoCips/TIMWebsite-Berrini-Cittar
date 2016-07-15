@@ -10,7 +10,7 @@
         <script type="text/javascript" src="fun.js"></script>
     </head>
     
-    <body style="text-align:center" onload="show(3)">
+    <body style="text-align:center" onload="show()">
         <ul id="menu">
             <div class="top-menu">
                 <a href="index.html">
@@ -59,47 +59,47 @@
             <div>
                 <img class="top-image" src="pics/Prodotti.png"/>
             </div><br>
-
-            <div class="to-section">
-                <a href="#section-smart">Smartphone</a>
-                <a href="#section-tablet">Tablet</a>
-                <a href="#section-modem">Modem e networking</a>
-            </div><br>
+            
+            <ul class="tab">
+                <li><a href="#section-smart" class="tablinks">Smartphone e telefoni</a></li>
+                <li><a href="#section-tablet" class="tablinks">Tablet e Computer</a></li>
+                <li><a href="#section-modem" class="tablinks">Modem e networking</a></li>
+            </ul>
             
             <div id="section-smart" class="section">
-                <a href="smartphone-e-telefoni.html"><h1>Smartphone e telefoni</h1></a>
+                <h1><a href="smartphone-e-telefoni.html">Smartphone e telefoni</a></h1>
                 <div class="sub-menu">
                     <a href="smartphone-e-telefoni.html">Tutti</a><br>
                     <a href="smartphone-e-telefoni.html#smart">Smartphone</a><br>
                     <a href="smartphone-e-telefoni.html#iphone">iPhone</a><br>
                     <a>Telefoni fissi</a><br>
                 </div><br>
-                <div id="Smartphone-device" style="width:800px; float:right;">
+                <div id="Smartphone-device" style="width:750px; float:right;">
                 </div>
             </div><br>
 
             <hr>
 
             <div id="section-tablet" class="section">
-                <a href="tablet-e-computer.html"><h1>Tablet e computer</h1></a>
+                <h1><a href="tablet-e-computer.html">Tablet e computer</a></h1>
                 <div class="sub-menu">
                     <a href="tablet-e-computer.html">Tutti</a><br>
                     <a href="tablet-e-computer.html#tablet">Tablet</a><br>
                     <a href="tablet-e-computer.html#ipad">iPad</a><br>
-                    <a onclick="show(3)">Computer</a><br>
+                    <a>Computer</a><br>
                 </div><br>
-                <div id="Tablet-device" style="width:800px; float:right;">
+                <div id="Tablet-device" style="width:750px; float:right;">
                 </div>
             </div><br>
 
             <hr>
 
             <div id="section-modem" class="section">
-                <a href="modem-e-networking.html"><h1>Modem e networking</h1></a>
+                <h1><a>Modem e networking</a></h1>
                 <div class="sub-menu">
-                    <a href="#">Tutti</a><br>
-                    <a href="#">Modem</a><br>
-                    <a href="#">Cose</a><br>
+                    <a>Tutti</a><br>
+                    <a>Modem</a><br>
+                    <a>Cose</a><br>
                 </div><br>
                 <div class="device">
 

@@ -181,6 +181,8 @@ function filter(device) {
     
     filter = typeStr + priceStr + inchStr + brandStr + OSStr + offerStr;
     
+    console.log("ciao");
+    
     if (window.XMLHttpRequest) {
         // code for IE7+, Firefox, Chrome, Opera, Safari
         xmlhttp = new XMLHttpRequest();
@@ -193,7 +195,7 @@ function filter(device) {
             document.getElementById(device+"-device").innerHTML = xmlhttp.responseText;
         }
     };
-    xmlhttp.open("GET", "filter.php?d="+device+"&f="+filter, true);
+    xmlhttp.open("GET", "http://timhyp53.altervista.org/filter.php?d="+device+"&f="+filter, true);
     xmlhttp.send();
 }
 
@@ -215,5 +217,15 @@ function openTab(evt, title) {
 
     // Show the current tab, and add an "active" class to the link that opened the tab
     document.getElementById(title).style.display = "block";
+    evt.currentTarget.className += " selected";
+}
+
+function select(evt) {
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" selected", "");
+    }
     evt.currentTarget.className += " selected";
 }
