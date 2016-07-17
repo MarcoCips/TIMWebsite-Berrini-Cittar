@@ -1,0 +1,32 @@
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;margin:0}
+
+/* Slideshow container */
+.container {
+    min-width:1000;
+    max-width:1000;
+    margin: 0 auto 50;
+}
+
+.carousel-control.left, .carousel-control.right{
+    width: 0px;
+    color: black;
+}
+
+.carousel-inner{
+    min-width:905;
+    max-width:905;
+    backface-visibility: hidden;
+    margin-left: 30;
+}
+
+.carousel-indicators{
+    margin-bottom:-10;
+    height: 20px;
+}
+
+.item button{
+    margin: -80px 0 0 -660px;
+    width: 200;
+    height: 40;
+}
