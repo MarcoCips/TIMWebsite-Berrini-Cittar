@@ -11,25 +11,26 @@
     if(strpos($device, '-') !== false){
         $sql="SELECT Nome,Prezzo,Sconto,Tipologia,Sito FROM Smartphone WHERE (1=1" . $filter . ") UNION SELECT Nome,Prezzo,Sconto,Tipologia,Sito FROM Tablet WHERE (1=1" . $filter . ")";
     } else {
-        $sql="SELECT Nome,Prezzo,Sconto,Sito FROM " . $device . " WHERE 1=1" . $filter;
+        $sql="SELECT Nome,Prezzo,Sconto,Sito,Tipologia FROM " . $device . " WHERE 1=1" . $filter;
     }
     $result = mysqli_query($con,$sql);
     while($row = mysqli_fetch_array($result)) {
         if($row['Sito']){
-            echo "<a href='" . str_replace(' ','-',$row['Nome']) . ".html'>";
-        }
-        echo "<div class='device'>";
-        if($device=='Smartphone'){
-            echo "<img src='pics/phones/" . $row['Nome'] . ".jpg'/>";
-        } else if($device=='Tablet') {
-            echo "<img src='pics/tablets/" . $row['Nome'] . ".jpg'/>";
-        } else {
             if($row['Tipologia']=='Smartphone' || $row['Tipologia']=='iPhone'){
-                echo "<img src='pics/phones/" . $row['Nome'] . ".jpg'/>";
+                echo "<a href='/dispositivi/smartphone-e-telefoni/" . str_replace(' ','-',$row['Nome']) . ".html'>";
             } else {
-                echo "<img src='pics/tablets/" . $row['Nome'] . ".jpg'/>";
+                echo "<a href='/dispositivi/tablet-e-computer/" . str_replace(' ','-',$row['Nome']) . ".html'>";
             }
         }
+        
+        echo "<div class='device'>";
+        
+        if($row['Tipologia']=='Smartphone' || $row['Tipologia']=='iPhone'){
+            echo "<img src='/pics/phones/" . $row['Nome'] . ".jpg'/>";
+        } else {
+            echo "<img src='/pics/tablets/" . $row['Nome'] . ".jpg'/>";
+        }
+        
         echo "<h4>" . $row['Nome'] . "</h4>";
         if(floatval($row['Sconto']) > 0){
             echo "<h4><strike>" . $row['Prezzo'] . " €</strike></h4>";

@@ -11,13 +11,17 @@
     $result = mysqli_query($con,$sql);
     while($row = mysqli_fetch_array($result)) {
         if($row['Sito']){
-            echo "<a href='" . str_replace(' ','-',$row['Nome']) . ".html'>";
+            if($type == "Smartphone"){
+                echo "<a href='/dispositivi/smartphone-e-telefoni/" . str_replace(' ','-',$row['Nome']) . ".html'>";
+            } else if ($type == "Tablet"){
+                echo "<a href='/dispositivi/tablet-e-computer/" . str_replace(' ','-',$row['Nome']) . ".html'>";
+            }
         }
         echo "<div class='device'>";
         if($type == "Smartphone"){
-            echo "<img src='pics/phones/" . $row['Nome'] . ".jpg'/>";
+            echo "<img src='/pics/phones/" . $row['Nome'] . ".jpg'/>";
         } else if($type == "Tablet"){
-            echo "<img src='pics/tablets/" . $row['Nome'] . ".jpg'/>";
+            echo "<img src='/pics/tablets/" . $row['Nome'] . ".jpg'/>";
         }
         echo "<h4>" . $row['Nome'] . "</h4>";
         if(floatval($row['Sconto']) > 0){
