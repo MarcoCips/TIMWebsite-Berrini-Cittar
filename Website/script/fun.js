@@ -129,14 +129,14 @@ function filter(device) {
             inchStr = " and (Display < 8";
         }
         if(check[8].checked){
-            if(priceStr==""){
+            if(inchStr==""){
                 inchStr = " and ((Display >= 8 and Display < 10)";
             } else {
                 inchStr += " or (Display >= 8 and Display < 10)";
             }
         }
         if(check[9].checked){
-            if(priceStr==""){
+            if(inchStr==""){
                 inchStr = " and (Display >= 10";
             } else {
                 inchStr += " or (Display >= 10)";
