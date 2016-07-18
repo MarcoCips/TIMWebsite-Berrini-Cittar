@@ -17,18 +17,18 @@
     while($row = mysqli_fetch_array($result)) {
         if($row['Sito']){
             if($row['Tipologia']=='Smartphone' || $row['Tipologia']=='iPhone'){
-                echo "<a href='/dispositivi/smartphone-e-telefoni/" . str_replace(' ','-',$row['Nome']) . ".html'>";
+                echo "<a href='../dispositivi/smartphone-e-telefoni/" . str_replace(' ','-',$row['Nome']) . ".html'>";
             } else {
-                echo "<a href='/dispositivi/tablet-e-computer/" . str_replace(' ','-',$row['Nome']) . ".html'>";
+                echo "<a href='../dispositivi/tablet-e-computer/" . str_replace(' ','-',$row['Nome']) . ".html'>";
             }
         }
         
         echo "<div class='device'>";
         
         if($row['Tipologia']=='Smartphone' || $row['Tipologia']=='iPhone'){
-            echo "<img src='/pics/phones/" . $row['Nome'] . ".jpg'/>";
+            echo "<img src='../pics/phones/" . $row['Nome'] . ".jpg'/>";
         } else {
-            echo "<img src='/pics/tablets/" . $row['Nome'] . ".jpg'/>";
+            echo "<img src='../pics/tablets/" . $row['Nome'] . ".jpg'/>";
         }
         
         echo "<h4>" . $row['Nome'] . "</h4>";
