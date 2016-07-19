@@ -8,10 +8,8 @@ function show() {
     "use strict";
     var xmlhttpPhone, xmlhttpTablet;
     if (window.XMLHttpRequest) {
-        // code for IE7+, Firefox, Chrome, Opera, Safari
         xmlhttpPhone = new XMLHttpRequest();
     } else {
-        // code for IE6, IE5
         xmlhttpPhone = new ActiveXObject("Microsoft.XMLHTTP");
     }
     xmlhttpPhone.onreadystatechange = function () {
@@ -23,10 +21,8 @@ function show() {
     xmlhttpPhone.send();
     
     if (window.XMLHttpRequest) {
-        // code for IE7+, Firefox, Chrome, Opera, Safari
         xmlhttpTablet = new XMLHttpRequest();
     } else {
-        // code for IE6, IE5
         xmlhttpTablet = new ActiveXObject("Microsoft.XMLHTTP");
     }
     xmlhttpTablet.onreadystatechange = function () {

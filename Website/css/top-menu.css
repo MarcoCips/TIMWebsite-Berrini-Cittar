@@ -70,8 +70,31 @@ li a:hover {
 .page {
     width: 1000px;
     margin: 0 auto;
+    display:block;
+    margin-bottom:50px;
+    overflow:hidden;
 }
 
 hr {
     width: 1000px;
+}
+
+.footer {
+    padding: 8;
+    z-index:1030;
+    background-color:#003c7f;
+    height:40;
+    min-width:1010px;
+}
+
+.footer-link {
+    font-size: 18px;
+    color: white;
+    margin-left:25;
+    margin-right:25;
+    padding: 10;
+}
+
+.footer-link:hover{
+    background-color: skyblue;
 }

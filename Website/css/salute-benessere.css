@@ -89,6 +89,7 @@ ul.tab li a:focus, .selected {background-color: #ccc;}
     border-top: none;
     width: 950px;
     margin: inherit;
+    margin-bottom: 70;
 }
 
 .tabcontent p {
@@ -100,4 +101,8 @@ ul.tab li a:focus, .selected {background-color: #ccc;}
 .tabcontent p span {
     width: 350px;
     float: right;
+}
+
+.testo img {
+    overflow-y:inherit;
 }

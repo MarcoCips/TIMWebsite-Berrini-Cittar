@@ -3,12 +3,13 @@ body {font-family: Verdana,sans-serif;margin:0}
 
 /* Slideshow container */
 .container {
-  max-width: 1000px;
+    min-width:1000;
+    max-width:1000;
   margin: auto;
 }
 
 .carousel-control.left, .carousel-control.right{
-    width: auto;
+    width: 0px;
     height: 300;
     color: black;
 }
@@ -25,6 +26,18 @@ body {font-family: Verdana,sans-serif;margin:0}
 }
 
 .carousel-indicators{
-   top:280px;
+   top:43%;
     height: 20px;
+}
+
+.slides-arrow {
+    width: 40;
+}
+
+.left-arr{
+    margin: 130px 0 0 -15px;
+}
+
+.right-arr{
+    margin: 130px 0 0 -29px;
 }
