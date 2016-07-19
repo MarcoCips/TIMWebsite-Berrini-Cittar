@@ -98,3 +98,7 @@ hr {
 .footer-link:hover{
     background-color: skyblue;
 }
+
+button.disabled {
+    color: lightgrey;
+}
