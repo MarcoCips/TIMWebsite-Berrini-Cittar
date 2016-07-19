@@ -1,0 +1,57 @@
+.sub-menu {
+    display:block;
+    float: left;
+    padding: 4 4 4 4;
+    margin-top: 15px;
+    width: 200px;
+    height: 170;;
+    font-size: 30px;
+    text-align: left;
+}
+
+.sub-menu > a, .sub-menu > h3 {
+    position: absolute;
+    font-size: 25px;
+    margin-left: 50px;
+    margin-top: 40px;
+}
+
+.section {
+    width: 4
+    overflow-y: hidden;
+    display: inline-block;
+    margin: 20;
+}
+
+.section img{
+    width: 200;
+    height: auto;
+}
+.section blockquote {
+    display: inline-block;
+    width: 400; 
+    vertical-align: middle;
+}
+
+.testimoni {
+    width: 800;
+    float: right;
+    margin-top: 60;
+}
+
+.circolare {
+  width: 300px; 
+  height: 300px;
+  border-radius:999em;    
+-moz-border-radius:999em;  
+-webkit-border-radius:999em; 
+  -o-border-radius: 999em;   
+}
+
+p {
+    font-size: 24;
+}
+
+cite {
+    font-size: 10;
+}

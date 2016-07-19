@@ -1,0 +1,26 @@
+.sub-menu {
+    display:block;
+    float: left;
+    padding: 4 4 4 4;
+    margin-top: 15px;
+    width: 200px;
+    height: 170;;
+    font-size: 30px;
+    text-align: left;
+}
+
+.sub-menu > a, .sub-menu > h3 {
+    position: absolute;
+    font-size: 25px;
+    margin-left: 50px;
+    margin-top: 40px;
+}
+
+.testo {
+    margin-top: 50;
+    display: inline-block;
+}
+
+p {
+    width: 600;
+}
