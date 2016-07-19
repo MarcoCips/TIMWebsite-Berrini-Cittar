@@ -7,12 +7,15 @@
     display:block;
     float:left;
 }
+
 .page .section{
     text-align: center;
 }
+
 .section {
     width:800px;
     margin: 0 auto;
+    overflow-y:hidden;
 }
 
 .ast-sec {
