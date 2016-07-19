@@ -7,6 +7,8 @@
         die('Could not connect: ' . mysqli_error($con));
     }
 
+    mysqli_set_charset($con,"utf8");
+
     mysqli_select_db($con,"my_timhyp53");
     $sql="SELECT * FROM " . $type . " LIMIT 3";
     $result = mysqli_query($con,$sql);

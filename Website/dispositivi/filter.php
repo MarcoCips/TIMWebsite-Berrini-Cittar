@@ -8,6 +8,8 @@
         die('Could not connect: ' . mysqli_error($con));
     }
 
+    mysqli_set_charset($con,"utf8");
+
     mysqli_select_db($con,"my_timhyp53");
     if(strpos($device, '-') !== false){
         $sql="SELECT Nome,Prezzo,Sconto,Tipologia,Sito FROM Smartphone WHERE (1=1" . $filter . ") UNION SELECT Nome,Prezzo,Sconto,Tipologia,Sito FROM Tablet WHERE (1=1" . $filter . ")";
