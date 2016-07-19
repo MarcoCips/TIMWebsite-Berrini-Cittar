@@ -1,4 +1,5 @@
 <?php
+    header('Access-Control-Allow-Origin: *');
     $type = strval($_GET['q']);
 
     $con = mysqli_connect('localhost','timhyp53','','my_timhyp53');

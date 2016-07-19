@@ -1,4 +1,5 @@
 <?php
+    header('Access-Control-Allow-Origin: *');
     $device = strval($_GET['d']);
     $filter = strval($_GET['f']);
 

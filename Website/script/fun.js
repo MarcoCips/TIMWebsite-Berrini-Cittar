@@ -17,7 +17,7 @@ function show() {
             document.getElementById("Smartphone-device").innerHTML = xmlhttpPhone.responseText;
         }
     };
-    xmlhttpPhone.open("GET", "../get-phones.php?q=Smartphone", true);
+    xmlhttpPhone.open("GET", "http://timhyp53.altervista.org/get-phones.php?q=Smartphone", true);
     xmlhttpPhone.send();
     
     if (window.XMLHttpRequest) {
@@ -30,7 +30,7 @@ function show() {
             document.getElementById("Tablet-device").innerHTML = xmlhttpTablet.responseText;
         }
     };
-    xmlhttpTablet.open("GET", "../get-phones.php?q=Tablet", true);
+    xmlhttpTablet.open("GET", "http://timhyp53.altervista.org/get-phones.php?q=Tablet", true);
     xmlhttpTablet.send();
 }
 
@@ -190,7 +190,7 @@ function filter(device) {
             document.getElementById(device+"-device").innerHTML = xmlhttp.responseText;
         }
     };
-    xmlhttp.open("GET", "../dispositivi/filter.php?d="+device+"&f="+filter, true);
+    xmlhttp.open("GET", "http://timhyp53.altervista.org/dispositivi/filter.php?d="+device+"&f="+filter, true);
     xmlhttp.send();
 }
 
