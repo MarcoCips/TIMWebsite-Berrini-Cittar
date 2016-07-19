@@ -1,3 +1,7 @@
+$(document).bind("mobileinit", function () { 
+$.support.cors = true; 
+$.mobile.allowCrossDomainPages = true; });
+
 function changeImg(img,evt) {
     "use strict";
     document.getElementById('phone-img').src = img;
